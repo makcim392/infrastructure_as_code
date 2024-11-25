@@ -1,6 +1,5 @@
 # Infrastructure as Code (IaC)
 
-
 ## Project description
 The goal of this project is to create a simple infrastructure as code (IaC) using Terraform.
 
@@ -14,3 +13,10 @@ The goal of this project is to create a simple infrastructure as code (IaC) usin
 - `terraform output`: Show output values from your Terraform state
 - `terraform fmt`: Rewrites all Terraform configuration files to a canonical format
 - `terraform validate`: Validates the Terraform files
+
+## Environment
+
+### Working on MacOS
+
+- Install Terraform: `brew install terraform`
+- Install tflint: `brew install tflint`

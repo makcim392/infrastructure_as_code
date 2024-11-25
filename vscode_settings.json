@@ -1,0 +1,178 @@
+{
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit",
+        "source.fixAll.eslint": "explicit",
+        "source.fixAll.tslint": "explicit",
+        "source.fixAll.stylelint": "explicit"
+    },
+    "editor.columnSelection": false,
+    "editor.mouseWheelZoom": true,
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "git.autofetch": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.startupEditor": "newUntitledFile",
+    "emmet.triggerExpansionOnTab": true,
+    "explorer.confirmDelete": false,
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "terminal.integrated.profiles.windows": {
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd"
+        },
+        "Git Bash": {
+            "source": "Git Bash"
+        },
+        "cmd": {
+            "path": "C:\\WINDOWS\\System32\\cmd.exe",
+            "args": []
+        },
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        }
+    },
+    "git.enableSmartCommit": true,
+    "workbench.colorTheme": "Andromeda",
+    "prettier.arrowParens": "avoid",
+    "prettier.singleQuote": true,
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
+    "prettier.trailingComma": "all",
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "eslint.format.enable": true,
+    "tabnine.experimentalAutoImports": true,
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": true,
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": true,
+    "editor.wordWrap": "wordWrapColumn",
+    "javascript.format.semicolons": "insert",
+    "editor.suggestSelection": "first",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "files.associations": {
+        "*.go": "go"
+    },
+    //go settings
+    "go.coverOnSave": true,
+    "go.useLanguageServer": true,
+    "go.coverageDecorator": {
+        "type": "highlight",
+        "coveredHighlightColor": "rgba(64,128,128,0.5)",
+        "uncoveredHighlightColor": "rgba(128,64,64,0.25)",
+        "coveredGutterStyle": "blockgreen",
+        "uncoveredGutterStyle": "blockred"
+    },
+    "go.coverOnSingleTest": true,
+    "git.confirmSync": false,
+    "telemetry.telemetryLevel": "off",
+    "security.workspace.trust.untrustedFiles": "open",
+    "go.toolsManagement.autoUpdate": true,
+    "githubPullRequests.createOnPublishBranch": "never",
+    "workbench.sideBar.location": "right",
+    "[go]": {
+        "editor.defaultFormatter": "golang.go",
+        "editor.formatOnSave": false,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        }
+    },
+    "editor.formatOnSave": true,
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": "explicit"
+        },
+        "editor.formatOnSave": true
+    },
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": "explicit"
+        },
+        "editor.formatOnSave": true
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "eslint.validate": [
+        "javascript",
+        "typescript",
+        "html",
+        "css"
+    ],
+    "eslint.options": {
+        "extensions": [
+            ".js",
+            ".ts",
+            "html",
+            "css"
+        ]
+    },
+    "githubPullRequests.pullBranch": "never",
+    "eslint.probe": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "html",
+        "vue",
+        "markdown",
+        "jsx"
+    ],
+    "editor.accessibilitySupport": "off",
+    "terminal.integrated.env.osx": {
+        "FIG_NEW_SESSION": "1",
+        "CW_NEW_SESSION": "1",
+        "Q_NEW_SESSION": "1"
+    },
+    "files.eol": "\n",
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": true,
+        "scminput": false
+    },
+    "[css][html]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": "explicit"
+        }
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "git.openRepositoryInParentFolders": "always",
+    "github.copilot.editor.enableAutoCompletions": true,
+    "editor.rulers": [],
+    // terraform
+    "[terraform]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "GitHub.copilot",
+        "editor.semanticHighlighting.enabled": true,
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true
+    },
+    "[terraform-vars]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "GitHub.copilot",
+        "editor.semanticHighlighting.enabled": true,
+        "editor.tabSize": 2
+    },
+    "files.associations": {
+        "*.tf": "terraform",
+        "*.tfvars": "terraform"
+    }
+}
