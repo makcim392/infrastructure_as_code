@@ -20,3 +20,29 @@ The goal of this project is to create a simple infrastructure as code (IaC) usin
 
 - Install Terraform: `brew install terraform`
 - Install tflint: `brew install tflint`
+- Install aws cli: `brew install awscli`t
+
+## Setting up AWS credentials
+
+1. Access IAM Identity Center
+2. Enable it in case it is not enabled
+3. Edit settings summary accordingly
+4. Set region
+5. Create a user
+6. Then go to your environment and start with the following commands:
+
+```bash
+aws configure sso
+````
+
+enter the SSO session name
+
+in SSO start URL enter the AWS access Portal URL provided in the IAM Identity Center settings summary.
+
+SSO region: us-west-1
+
+Nothing in SSO registration scopes
+
+7. Enter credentials in the browser
+8. Create a permission set as AdministratorAccess
+9. In AWS accounts add the account you want to use
