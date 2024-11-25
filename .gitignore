@@ -50,3 +50,5 @@ tfplan
 .ssh
 .pre-commit-config.yaml
 setup_ssh.sh
+
+local_notes.md

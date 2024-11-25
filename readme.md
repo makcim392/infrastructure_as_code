@@ -46,3 +46,14 @@ Nothing in SSO registration scopes
 7. Enter credentials in the browser
 8. Create a permission set as AdministratorAccess
 9. In AWS accounts add the account you want to use
+10. Repeat ```aws configure sso```
+11. Allow access and there will be a succeful message saying 
+
+```bash
+Request approved
+
+AWS CLI has been given requested permissions
+```
+
+12. Set the CLI default client Region
+13. CLI default output format can be empty for now
