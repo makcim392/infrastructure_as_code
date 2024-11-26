@@ -1,7 +1,7 @@
 # Infrastructure as Code (IaC)
 
 ## Project description
-The goal of this project is to create a simple infrastructure as code (IaC) using Terraform.
+The goal of this project is to create a simple infrastructure as code (IaC) using Terraform. I've used AWS SSO login to connect to my AWS account. I've created a S3 bucket with Terraform. I've also used the AWS CLI to configure my AWS credentials. I've used the following commands to create the S3 bucket: `terraform init`, `terraform plan`, `terraform apply`. I've also used the following commands to destroy the S3 bucket: `terraform destroy`. I've used the following commands to show the S3 bucket: `terraform show`. I've used the following commands to validate the S3 bucket: `terraform validate`. 
 
 ## Useful commands
 
