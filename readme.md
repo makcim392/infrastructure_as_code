@@ -67,6 +67,20 @@ AWS CLI has been given requested permissions
 4. Use the ```terraform plan``` command to see the changes that Terraform will make to your infrastructure.
 5. Execute the ```terraform apply``` command to apply the changes to your infrastructure.
 
+![created bucket in AWS console](image.png)
+
 # Best practices for Terraform
 
 - Mark resources with tags like ```Iac = true```
+
+# Planning destruction
+
+- Use the ```terraform plan -destroy``` command to see the changes that Terraform will make to your infrastructure.
+
+# Destroying a resource
+
+- Use the ```terraform destroy``` command to destroy the resources created by Terraform. This command will prompt you for confirmation before destroying the resources. If you want to skip the confirmation prompt, you can use the ```-auto-approve``` flag. For example:
+
+```bash
+terraform destroy -auto-approve
+```
