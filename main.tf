@@ -1,11 +1,12 @@
 resource "aws_s3_bucket" "s3_bucket" {
   # Add some unique identifiers to make the name unique
-  bucket = "rocketseat-bucket-iac-${random_string.suffix.result}"
+  bucket = "rocketseat-bucket-iac-${random_string.suffix.result}-${terraform.workspace}"
 
   tags = {
-    Name = "First bucket"
-    Iac  = true
-    Test = true
+    Name    = "First bucket"
+    Iac     = true
+    Test    = true
+    context = "${terraform.workspace}"
   }
 }
 

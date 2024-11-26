@@ -86,8 +86,6 @@ AWS CLI has been given requested permissions
 terraform destroy -auto-approve
 ```
 
-# Workspaces
-
 # How does Terraform work?
 
 ## State
@@ -106,3 +104,22 @@ The ```terraform.tfstate.backup``` file is a backup of the ```terraform.tfstate`
 
 - If the resources was changed outside of Terraform, Terraform will not be able to manage it anymore.
 - If a tag is changed and becomes null, Terraform will try to delete it.
+
+# Workspaces
+
+By default, Terraform uses a single workspace called ```default```. This workspace is created automatically when you initialize a new Terraform project. You can create additional workspaces to manage different environments or configurations. For example, you might have a workspace for your development environment and another workspace for your production environment.
+
+## Workspaces and state
+
+Each workspace has its own state file. This means that you can have different resources in different workspaces. For example, you might have a resource in your development workspace that is not present in your production workspace. When you switch between workspaces, Terraform will automatically load the state file for the current workspace.
+
+Workspaces are saved in the ```terraform.tfstate``` file. When you run a ```plan``` or ```apply``` command, Terraform will compare the current state of your infrastructure to the desired state defined in your Terraform configuration files. If there are any differences, Terraform will create a plan to bring your infrastructure into the desired state.
+
+## Useful commands
+
+- ```terraform workspace new <workspace_name>```: Create a new workspace
+- ```terraform workspace list```: List all workspaces
+- ```terraform workspace show```: Show the current workspace
+- ```terraform workspace select <workspace_name>```: Switch to a different workspace
+- ```terraform workspace delete <workspace_name>```: Delete a workspace
+
