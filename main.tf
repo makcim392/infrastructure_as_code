@@ -1,6 +1,6 @@
 resource "aws_s3_bucket" "s3_bucket" {
   # Add some unique identifiers to make the name unique
-  bucket = "rocketseat-bucket-iac-${random_string.suffix.result}-${terraform.workspace}"
+  bucket = "rocketseat-bucket-iac-2025-${terraform.workspace}"
 
   tags = {
     Name    = "First bucket"
@@ -8,11 +8,4 @@ resource "aws_s3_bucket" "s3_bucket" {
     Test    = true
     context = "${terraform.workspace}"
   }
-}
-
-# Add this to generate a random suffix
-resource "random_string" "suffix" {
-  length  = 8
-  special = false
-  upper   = false
 }
