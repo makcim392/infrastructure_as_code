@@ -20,7 +20,8 @@ The goal of this project is to create a simple infrastructure as code (IaC) usin
 
 - Install Terraform: `brew install terraform`
 - Install tflint: `brew install tflint`
-- Install aws cli: `brew install awscli`t
+- Install aws cli: `brew install awscli`
+- Install VS Code Terraform extension.
 
 ## Setting up AWS credentials
 
@@ -57,3 +58,15 @@ AWS CLI has been given requested permissions
 
 12. Set the CLI default client Region
 13. CLI default output format can be empty for now
+
+# S3 bucket creation with Terraform
+
+1. Create a main.tf or resources.tf file 
+2. Fill it with the corresponding code
+3. Verify the code with ```terraform validate```
+4. Use the ```terraform plan``` command to see the changes that Terraform will make to your infrastructure.
+5. Execute the ```terraform apply``` command to apply the changes to your infrastructure.
+
+# Best practices for Terraform
+
+- Mark resources with tags like ```Iac = true```
