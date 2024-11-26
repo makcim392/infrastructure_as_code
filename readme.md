@@ -3,7 +3,17 @@
 ## Project description
 The goal of this project is to create a simple infrastructure as code (IaC) using Terraform. I've used AWS SSO login to connect to my AWS account. I've created a S3 bucket with Terraform. I've also used the AWS CLI to configure my AWS credentials. I've used the following commands to create the S3 bucket: `terraform init`, `terraform plan`, `terraform apply`. I've also used the following commands to destroy the S3 bucket: `terraform destroy`. I've used the following commands to show the S3 bucket: `terraform show`. I've used the following commands to validate the S3 bucket: `terraform validate`. 
 
-After that, I created an S3 bucket connected with a CloudFront distribution.
+
+### CloudFront
+
+After that, I created an S3 bucket connected with a CloudFront distribution. I used a custom module inside the ```./modules/``` directory.
+
+### SQS
+
+For this service, I'm going to use the [module](https://registry.terraform.io/modules/terraform-aws-modules/sqs/aws/latest) available in the Terraform registry.
+
+When working with queues it is important to consider having a dead letter queue (DLQ) to handle messages that could not be processed by the main queue. This is useful to avoid losing messages and to be able to analyze the cause of the failures.
+
 
 ## Useful commands
 
