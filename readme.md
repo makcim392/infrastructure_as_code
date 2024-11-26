@@ -72,6 +72,7 @@ AWS CLI has been given requested permissions
 # Best practices for Terraform
 
 - Mark resources with tags like ```Iac = true```
+- Make the AWS console read-only, so you are forced to use IaC to create or modify resources.
 
 # Planning destruction
 
@@ -84,3 +85,24 @@ AWS CLI has been given requested permissions
 ```bash
 terraform destroy -auto-approve
 ```
+
+# Workspaces
+
+# How does Terraform work?
+
+## State
+
+Any ```plan``` or ```apply``` command saves the current state of your infrastructure to the Terraform state file, which is named ```terraform.tfstate``` by default. This state file is extremely important; it maps various resource metadata to actual resource IDs so that Terraform knows what it is managing. This is why it is so important to keep your state file in a safe and accessible location.
+
+### ```terraform.tfstate``` file
+
+The ```terraform.tfstate``` file is the default state file used by Terraform. It is created in the same directory as your Terraform configuration files. This file contains the current state of your infrastructure, including the IDs of any resources that Terraform has created. It is a JSON file that can be read and modified by humans, but it is generally not recommended to do so.
+
+### ```terraform.tfstate.backup``` file
+
+The ```terraform.tfstate.backup``` file is a backup of the ```terraform.tfstate``` file. It is created automatically by Terraform when you run a ```plan``` or ```apply``` command. This file is used to restore the state of your infrastructure in case the ```terraform.tfstate``` file becomes corrupted or lost. It is a good idea to keep this file in a safe place, such as a version control system or a secure backup location.
+
+# Terraform facts
+
+- If the resources was changed outside of Terraform, Terraform will not be able to manage it anymore.
+- If a tag is changed and becomes null, Terraform will try to delete it.
