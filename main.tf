@@ -18,12 +18,3 @@ module "cloudfront" {
   depends_on = [module.s3]
 }
 
-module "sqs" {
-  source     = "terraform-aws-modules/sqs/aws"
-  name       = "rocketseat-sqs"
-  create_dlq = true
-  tags = {
-    Iac = true
-  }
-
-}

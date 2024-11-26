@@ -18,6 +18,8 @@ When working with queues it is important to consider having a dead letter queue 
 
 Even though I was creating just two resources, when applying ```terraform apply``` it was informed that 4 resources were to be added. The queue and the dead letter queue are created as separate resources, but the dead letter queue is configured as a dead letter queue for the main queue.
 
+To remove the SQS infra, just removing it from the ```main.tf```file and running ```terraform apply``` again.
+
 ##### Redrive policy
 
 The redrive policy is a JSON document that you can attach to an Amazon SQS queue to specify the source queue and dead-letter queue for the undeliverable messages. The redrive policy is used to configure a dead-letter queue (DLQ) for an Amazon SQS queue. The DLQ is a separate queue that receives messages from the source queue when any of the following events occur:
@@ -146,3 +148,10 @@ Workspaces are saved in the ```terraform.tfstate``` file. When you run a ```plan
 # Modules
 
 Everytime you create a module, you have to run ```terraform init``` to download the providers.
+
+
+# Datasources
+
+Datasources are used to fetch information about resources that are already created. They are read-only and cannot be modified. Datasources are defined in the same way as resources, but with a ```data``` block instead of a ```resource``` block.
+
+Datasources need to have the associated resources already created.
