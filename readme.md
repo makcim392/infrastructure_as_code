@@ -123,3 +123,6 @@ Workspaces are saved in the ```terraform.tfstate``` file. When you run a ```plan
 - ```terraform workspace select <workspace_name>```: Switch to a different workspace
 - ```terraform workspace delete <workspace_name>```: Delete a workspace
 
+# Modules
+
+Everytime you create a module, you have to run ```terraform init``` to download the providers.
