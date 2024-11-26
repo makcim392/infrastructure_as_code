@@ -14,6 +14,13 @@ For this service, I'm going to use the [module](https://registry.terraform.io/mo
 
 When working with queues it is important to consider having a dead letter queue (DLQ) to handle messages that could not be processed by the main queue. This is useful to avoid losing messages and to be able to analyze the cause of the failures.
 
+#### Key takeaways
+
+Even though I was creating just two resources, when applying ```terraform apply``` it was informed that 4 resources were to be added. The queue and the dead letter queue are created as separate resources, but the dead letter queue is configured as a dead letter queue for the main queue.
+
+##### Redrive policy
+
+The redrive policy is a JSON document that you can attach to an Amazon SQS queue to specify the source queue and dead-letter queue for the undeliverable messages. The redrive policy is used to configure a dead-letter queue (DLQ) for an Amazon SQS queue. The DLQ is a separate queue that receives messages from the source queue when any of the following events occur:
 
 ## Useful commands
 
