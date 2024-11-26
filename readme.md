@@ -3,6 +3,8 @@
 ## Project description
 The goal of this project is to create a simple infrastructure as code (IaC) using Terraform. I've used AWS SSO login to connect to my AWS account. I've created a S3 bucket with Terraform. I've also used the AWS CLI to configure my AWS credentials. I've used the following commands to create the S3 bucket: `terraform init`, `terraform plan`, `terraform apply`. I've also used the following commands to destroy the S3 bucket: `terraform destroy`. I've used the following commands to show the S3 bucket: `terraform show`. I've used the following commands to validate the S3 bucket: `terraform validate`. 
 
+After that, I created an S3 bucket connected with a CloudFront distribution.
+
 ## Useful commands
 
 - `terraform init`: Initialize a Terraform working director
@@ -73,6 +75,7 @@ AWS CLI has been given requested permissions
 
 - Mark resources with tags like ```Iac = true```
 - Make the AWS console read-only, so you are forced to use IaC to create or modify resources.
+- Make sure to run ```terraform fmt``` when there are many changes in the code.
 
 # Planning destruction
 
